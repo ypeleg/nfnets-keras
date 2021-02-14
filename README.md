@@ -1,8 +1,5 @@
 
 # Keras implementation of Normalizer-Free Networks and SGD - Adaptive Gradient Clipping
-![Python Package](https://github.com/ypeleg/nfnets-keras/workflows/Upload%20Python%20Package/badge.svg)
-![Docs](https://readthedocs.org/projects/nfnets-keras/badge/?version=latest
-)
 
 Paper: https://arxiv.org/abs/2102.06171.pdf
 
