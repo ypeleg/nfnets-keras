@@ -2,7 +2,7 @@
 
 import tensorflow as tf
 from keras import backend as K
-from nfnet_layers import WSConv2D, SqueezeExcite, StochasticDepth
+from .nfnet_layers import WSConv2D, SqueezeExcite, StochasticDepth
 
 
 def GLU(inputs):
