@@ -1,8 +1,5 @@
 
 # Keras implementation of Normalizer-Free Networks and SGD - Adaptive Gradient Clipping
-![Python Package](https://github.com/ypeleg/nfnets-keras/workflows/Upload%20Python%20Package/badge.svg)
-![Docs](https://readthedocs.org/projects/nfnets-keras/badge/?version=latest
-)
 
 Paper: https://arxiv.org/abs/2102.06171.pdf
 
@@ -23,7 +20,7 @@ or install the latest code using:
 
 `pip3 install git+https://github.com/ypeleg/nfnets-keras`
 # Usage
-## WSConv2d
+## NFNetF Model
 
 
 
@@ -41,7 +38,7 @@ model.fit(X, y)
 
 
 
-
+## WSConv2D
 Use `WSConv2D` like any other `keras.layer`.
 
 ```python
@@ -51,7 +48,9 @@ from nfnets_keras import WSConv2D
 conv = Conv2D(16, 3)(l)
 w_conv = WSConv2D(16, 3)(conv)
 ```
-## SGD - Adaptive Gradient Clipping
+
+
+## SGD_AGC - Adaptive Gradient Clipping
 
 Similarly, use `SGD_AGC` like `keras.optimizer.SGD`
 ```python
@@ -62,17 +61,18 @@ from nfnets_keras import SGD_AGC
 model.compile( SGD_AGC(lr=1e-3), loss='categorical_crossentropy' )
 ```
 
-# Docs
-
-Find the docs at [readthedocs](https://nfnets-pytorch.readthedocs.io/en/latest/)
-
 # TODO
-- [x] WSConv2d
+- [x] WSConv2D
 - [x] SGD - Adaptive Gradient Clipping
 - [x] Function to automatically replace Convolutions in any module with WSConv2d
 - [x] Documentation
 - [x] NFNets
 - [ ] NF-ResNets
+
+# Credit for the original pytroch implementation 
+```
+https://github.com/vballoli/nfnets-pytorch
+```
 
 # Cite Original Work
 
