@@ -86,13 +86,14 @@ class NFNet(tf.keras.Model):
     def __init__(self, num_classes=None, variant = 'F0', width = 1.0, se_ratio = 0.5, alpha = 0.2, stochdepth_rate = 0.1, drop_rate = None, activation = 'gelu', fc_init = None, final_conv_mult = 2, final_conv_ch = None, use_two_convs = True, name = 'NFNet', include_top = True):
 
         super(NFNet, self).__init__(name = name)
-        block_params = self.variant_dict[self.variant]
+        
 
         self.width = width
         self.variant = variant
         self.se_ratio = se_ratio
         self.num_classes = num_classes
         self.include_top = include_top
+        block_params = self.variant_dict[self.variant]
         self.width_pattern = block_params['width']
         self.depth_pattern = block_params['depth']
         self.activation = nonlinearities[activation]
